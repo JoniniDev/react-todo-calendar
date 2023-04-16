@@ -1,0 +1,79 @@
+.Slots__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 17px;
+    height: 97px;
+    align-items: flex-start;
+    padding: 0;
+    order: 2;
+}
+
+.Slots__button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    gap: 8px;
+    width: 158px;
+    height: 40px;
+    background-color: #F3F2F1;
+    border: none;
+    border-radius: 4px;
+    flex-shrink: 1;
+    order: 0;
+    flex-grow: 1;
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #606060;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &.Slots__selected,
+    &.Slots__active {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 8px;
+        gap: 8px;
+        width: 158px;
+        height: 40px;
+        border-radius: 4px;
+        flex-shrink: 1;
+        flex-grow: 1;
+    }
+
+    &.Slots__selected {
+        background-color: #bababa;
+        color: #6e6e6e;
+    }
+
+    &.Slots__active {
+        background-color: #70C05B;
+        color: #fff;
+
+        &.Slots__selected {
+            background-color: #c05b5b;
+            color: #fff;
+        }
+    }
+
+    &:hover {
+        color: #414141;
+        background-color: #e3e3e3;
+
+        &.Slots__active {
+            background-color: #c05b5b;
+            color: #fff;
+
+            &.Slots__selected {
+                background-color: #c05b5b;
+                color: #fff;
+            }
+        }
+    }
+}

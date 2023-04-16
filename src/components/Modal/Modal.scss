@@ -1,0 +1,55 @@
+@import "./../../globalStyle/DarkModeGlobal.scss";
+
+.Modal__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.Modal {
+    background: #fff;
+    width: 400px;
+    max-width: 90%;
+    border-radius: 4px;
+    box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.3);
+    position: relative;
+    padding: 16px;
+
+    .Modal__closeBtn {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        border: none;
+        background-color: transparent;
+        font-size: 20px;
+        color: #444;
+        cursor: pointer;
+
+        &:hover {
+            color: #000;
+        }
+
+        &.dark-mode {
+            color: #fff;
+
+            &:hover {
+                color: #bdbdbd;
+            }
+        }
+    }
+
+    &.dark-mode {
+        background: $dark-color;
+    }
+
+    &.Modal__content {
+        margin-top: 16px;
+    }
+}

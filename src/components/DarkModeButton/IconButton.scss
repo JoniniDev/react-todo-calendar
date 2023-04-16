@@ -1,0 +1,16 @@
+$duration: 0.5s;
+
+.IconButton__button {
+    border: none;
+    background: none;
+    width: 42px;
+    height: 42px;
+    top: 23px;
+    right: 30px;
+    position: absolute;
+    cursor: pointer;
+    transition: transform .3s ease-in-out;
+    &.is-dark {
+        transform: rotate(360deg);
+    }
+}
